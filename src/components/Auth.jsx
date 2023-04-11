@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
-import Typist from "react-typist";
+// import Typist from "react-typist";
 
 import signinImage from '../assets/Work chat-amico.png';
 
@@ -17,12 +17,12 @@ const initialState = {
 }
 
 const Auth = () => {
-    const [count,setCount] = useState(1);
+    // const [count,setCount] = useState(1);
     const [form, setForm] = useState(initialState);
     const [isSignup, setIsSignup] = useState(true);
-    useEffect(()=>{
-        setCount(1);
-    },[count]);
+    // useEffect(()=>{
+    //     setCount(1);
+    // },[count]);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -60,7 +60,7 @@ const Auth = () => {
 
     return (
         <>
-        <div className='auth__form-container-heading'>
+        {/* <div className='auth__form-container-heading'>
         {count ? (
         <Typist avgTypingDelay={80} onTypingDone={() => setCount(0)}>
           <span>Welcome to Chatify</span>
@@ -70,7 +70,7 @@ const Auth = () => {
       ) : (
         ""
       )}
-      </div>
+      </div> */}
         <div className="auth__form-container">
             <div className="auth__form-container_fields">
                 <div className="auth__form-container_fields-content">
